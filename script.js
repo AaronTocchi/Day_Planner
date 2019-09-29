@@ -2,10 +2,10 @@
 // moment.js variables
 let date = moment().format('MMMM Do YYYY');
 let day = moment().format("dddd");
-let saveButtons = $(".button-addon2");
-let input = $(".form-control").val();
+let saveButtons = $(".btn");
+let input = $(".form-control").text();
 let currentHour = moment().hour();
-let taskArray = [];
+let taskArray =[];
 
 
 // my header including date
@@ -16,7 +16,7 @@ for (i = 9; i < 18; i++) {
     if (parseInt($('#' + i).attr('id')) < currentHour) {
         $('#' + i).attr('style', 'background-color: #808080');
     } else if (parseInt($('#' + i).attr('id')) > currentHour) {
-        $('#' + i).attr('style', 'background-color: #ffd4da');
+        $('#' + i).attr('style', 'background-color: #fff78a');
     } else {
         $('#' + i).attr('style', 'background-color: #F08080')
     }
@@ -33,9 +33,9 @@ for (i = 9; i < 18; i++) {
 // submit button to save to local storage
 saveButtons.on("click", function(){
 let taskArray =[];
-taskArray.push(input.value);
+taskArray.push(input);
 localStorage.setItem('items', JSON.stringify(taskArray));
-console.log(taskArray)
+console.log("hello world")
 
 })
 // loads data from storage
