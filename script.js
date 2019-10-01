@@ -42,6 +42,8 @@ for (i = 9; i < 18; i++) {
 function loadTasks() {
   let data = JSON.parse(localStorage.getItem('items'));
   console.log(data);
+  // data.append(value);
+
 
 }
 // run on page load
